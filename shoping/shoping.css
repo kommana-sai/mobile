@@ -1,0 +1,175 @@
+body{
+      background-color: rgb(111, 217, 234);
+    
+}
+.container{
+            margin: auto;
+            width: 1000px;
+            transition: 0.5s;
+}
+header{
+        display: grid;
+        grid-template-columns: 1fr 50px;
+       margin-top: 20px;
+    
+}
+header .openshoping{
+      position: relative;
+      text-align: right;
+}
+header .openshoping .material-symbols-outlined{
+      width: 40px;
+    
+}
+header .openshoping .quantity{
+    position: absolute;
+     background-color: red;
+     color: white;
+    top: -20px;
+     border-radius: 50%;
+     padding: 3px 8px;
+     left: 90%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.list{
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       column-gap: 30px;
+       row-gap: 30px;
+       margin-top: 20px;
+       margin-bottom: 40px;
+}
+
+/*EDIT THE CARD*/
+
+.card{
+      position: fixed;
+      background-color: gray;
+      height: 100vh;
+      width: 500px;
+      top: 0;
+      left:100%;
+      transition: 0.5s;
+}
+.card h3{
+        color: orangered;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+}
+.card .checkout{
+      bottom: 0;
+      position: absolute;
+      display: grid;
+      grid-template-columns:repeat(2,1fr);
+      width: 100%;
+      
+}
+.card .checkout div{
+      background-color: orange;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      display: flex;
+      width: 100%;
+}
+.card .checkout div:nth-child(2){
+    background-color: black;
+    color: white;
+}
+.active .card{
+    left: calc(100% - 500px);
+}
+.active .container{
+    transform: translateX(-200px);
+}
+
+/*JAVA SCRIPT*/
+/* style to cards */
+
+.list .item{
+    text-align: center;
+    background-color:  rgb(111, 217, 234);
+    padding: 20px;
+    letter-spacing: 2px;
+    box-shadow: 0 60px 60px  rgb(11, 69, 78);
+}
+.list .item img{
+    width: 150px;
+}
+.list .item button{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.list .item .name{
+    margin: 5px;
+    font-weight: bold;
+    color: black;
+}
+.list .item .price{
+    margin: 5px;
+}
+ 
+/*cart li design*/
+
+.listcard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3 , 1fr);
+    row-gap: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.listcard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+
+}
+.listcard li img{
+    width: 40px;
+
+}
+.listcard  button{
+
+    background-color: black;
+    color: white;
+}
+.listcard .count{
+    
+    padding-right:20px ;
+}
+
+/*responsive*/
+
+@media screen and ( max-width :600px)  {
+    .container{ }
+ header{
+     display: flex;
+     justify-content: space-around;
+ }
+    h1{
+        color: red;
+    }
+     header .openshoping{
+        margin-top: 20px;
+
+     }
+     .card{
+            height: 100%;
+     }
+  .list{
+     margin-left: 60%;
+     margin-top: 40%;
+     
+  }
+  
+   
+}
